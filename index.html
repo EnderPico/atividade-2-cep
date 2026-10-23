@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Consulte um CEP e encontre seu endereço com o ViaCEP.">
+<title>Encontre seu endereço</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<header><a href="./" aria-label="Página inicial">endereço<span>.</span></a><span>Consulta de CEP</span></header>
+<main>
+<section class="search" aria-labelledby="titulo">
+<h1 id="titulo">Um CEP.<br>Seu endereço.</h1>
+<p>Encontre ruas, bairros e cidades de todo o Brasil. Digite um CEP para começar.</p>
+<form id="formulario" novalidate>
+<label for="cep">Qual CEP você procura?</label>
+<div class="input-row"><input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" aria-describedby="ajuda mensagem" required><button id="buscar" type="submit">Buscar endereço <span aria-hidden="true">→</span></button></div>
+<small id="ajuda">Use 8 números, com ou sem hífen.</small>
+</form>
+<button class="example" id="exemplo" type="button">Experimentar com 01001-000</button>
+<p id="mensagem" role="status" aria-live="polite"></p>
+</section>
+<section class="result" id="painel" aria-labelledby="resultado-titulo" aria-busy="false">
+<div id="vazio"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><h2 id="resultado-titulo">Seu destino começa aqui.</h2><p>O endereço encontrado aparecerá neste espaço.</p></div>
+<div id="resultado" hidden><span id="cep-resultado" class="postal"></span><h2 id="rua"></h2><dl><div><dt>Bairro</dt><dd id="bairro"></dd></div><div><dt>Cidade</dt><dd id="cidade"></dd></div><div><dt>Estado</dt><dd id="estado"></dd></div><div><dt>DDD</dt><dd id="ddd"></dd></div></dl><p class="source">Endereço consultado no ViaCEP.</p></div>
+</section>
+</main>
+<footer><span>Feito para encontrar seu caminho.</span><a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">Dados: ViaCEP ↗</a></footer>
+</body></html>
